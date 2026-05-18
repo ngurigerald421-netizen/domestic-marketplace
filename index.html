@@ -14,7 +14,7 @@
         .container { max-width: 800px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); box-sizing: border-box; }
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #111; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 2px solid #888; border-radius: 4px; box-sizing: border-box; font-size: 1rem; color: #000; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 2px solid #555; border-radius: 4px; box-sizing: border-box; font-size: 1rem; color: #000; }
         .form-group select { background-color: white; }
         footer { background: #222; color: #ccc; text-align: center; padding: 1.5rem; margin-top: 40px; }
         footer a { color: #fff; text-decoration: none; }
@@ -31,12 +31,13 @@
     <!-- BOOKING FORM SECTION -->
     <div class="container" id="booking-section">
         <h2 style="text-align: center; color: #003366; margin-top: 0;">Book a Service</h2>
-        <p style="text-align: center; color: #333;">Fill out the details below to request a service provider.</p>
+        <p style="text-align: center; color: #333; font-weight: bold;">Fill out the details below to request a service provider.</p>
 
-        <!-- Connected directly to Web3Forms API -->
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <!-- Your Verified Web3Forms Access Key -->
-            <input type="hidden" name="access_key" value="7c1dd2ad-5ebb-4d1a-a9c0-f1774f68dd93>
+        <!-- Form Submission API connection -->
+        <form action="https://web3forms.com" method="POST">
+            
+            <!-- Pre-configured Access Key -->
+            <input type="hidden" name="access_key" value="7c1dd2ad-5ebb-4d1a-a9c0-f1774f68dd93">
 
             <div class="form-group">
                 <label>Full Name *</label>
@@ -77,7 +78,7 @@
 
             <div class="form-group">
                 <label>Estimated Work Size / Workload *</label>
-                <input type="text" name="Work_Size" placeholder="e.g. 2 basins of clothes / 2-bedroom house / small yard" required>
+                <input type="text" name="Work_Size" placeholder="e.g. 2 basins of clothes / 2-bedroom house" required>
             </div>
 
             <div style="display: flex; gap: 10px;" class="form-group">
