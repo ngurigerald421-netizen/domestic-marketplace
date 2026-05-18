@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mama Fua & Gardening Services</title>
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
+        body { font-family: sans-serif; margin: 0; padding: 0; color: #111; background-color: #f9f9f9; }
         header { background: linear-gradient(135deg, #003366, #0055aa); color: white; text-align: center; padding: 3rem 1rem; }
         header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
         header p { font-size: 1.2rem; margin-bottom: 20px; opacity: 0.9; }
@@ -13,8 +13,8 @@
         .btn:hover { background-color: #218838; }
         .container { max-width: 800px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); box-sizing: border-box; }
         .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #111; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 2px solid #888; border-radius: 4px; box-sizing: border-box; font-size: 1rem; color: #000; }
         .form-group select { background-color: white; }
         footer { background: #222; color: #ccc; text-align: center; padding: 1.5rem; margin-top: 40px; }
         footer a { color: #fff; text-decoration: none; }
@@ -31,11 +31,14 @@
     <!-- BOOKING FORM SECTION -->
     <div class="container" id="booking-section">
         <h2 style="text-align: center; color: #003366; margin-top: 0;">Book a Service</h2>
-        <p style="text-align: center; color: #666;">Fill out the details below to request a service provider.</p>
+        <p style="text-align: center; color: #333;">Fill out the details below to request a service provider.</p>
 
-        <!-- Replace FORM_URL_HERE with your Formspree/Web3Forms/Google Sheets endpoint later -->
-        <form action="FORM_URL_HERE" method="POST">
+        <!-- Connected directly to Web3Forms API -->
+        <form action="https://api.web3forms.com/submit" method="POST">
             
+            <!-- Your Verified Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="7c1dd2ad-5ebb-4d1a-a9c0-f1774f68dd93">
+
             <div class="form-group">
                 <label>Full Name *</label>
                 <input type="text" name="Client_Name" placeholder="e.g. John Doe" required>
