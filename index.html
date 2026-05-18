@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Fua & Gardening Services</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
+        header { background: linear-gradient(135deg, #003366, #0055aa); color: white; text-align: center; padding: 3rem 1rem; }
+        header h1 { margin: 0 0 10px 0; font-size: 2.5rem; }
+        header p { font-size: 1.2rem; margin-bottom: 20px; opacity: 0.9; }
+        .btn { display: inline-block; background-color: #28a745; color: white; text-decoration: none; padding: 12px 24px; font-weight: bold; border-radius: 4px; transition: background 0.2s; border: none; }
+        .btn:hover { background-color: #218838; }
+        .container { max-width: 800px; margin: 30px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); box-sizing: border-box; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+        .form-group select { background-color: white; }
+        footer { background: #222; color: #ccc; text-align: center; padding: 1.5rem; margin-top: 40px; }
+        footer a { color: #fff; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Instant Mama Fua & Gardening Services</h1>
+        <p>Connecting visitors in Kenya with trusted local domestic workers and gardeners.</p>
+        <a href="#booking-section" class="btn">Book a Service Now</a>
+    </header>
+
+    <!-- BOOKING FORM SECTION -->
+    <div class="container" id="booking-section">
+        <h2 style="text-align: center; color: #003366; margin-top: 0;">Book a Service</h2>
+        <p style="text-align: center; color: #666;">Fill out the details below to request a service provider.</p>
+
+        <!-- Replace FORM_URL_HERE with your Formspree/Web3Forms/Google Sheets endpoint later -->
+        <form action="FORM_URL_HERE" method="POST">
+            
+            <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="Client_Name" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label>M-Pesa Phone Number *</label>
+                <input type="tel" name="Phone_Primary" placeholder="e.g. 07XXXXXXXX" required>
+            </div>
+
+            <div class="form-group">
+                <label>Alternative Phone Number (Optional)</label>
+                <input type="tel" name="Phone_Secondary" placeholder="e.g. 07XXXXXXXX">
+            </div>
+
+            <div class="form-group">
+                <label>Estate / Town / Area *</label>
+                <input type="text" name="Location_Area" placeholder="e.g. Milimani, Nakuru" required>
+            </div>
+
+            <div class="form-group">
+                <label>Nearest Landmark or House Number *</label>
+                <input type="text" name="Location_Landmark" placeholder="e.g. Near Total Station, Gate 3" required>
+            </div>
+
+            <div class="form-group">
+                <label>Select Service Needed *</label>
+                <select name="Service_Type" required>
+                    <option value="">-- Select a Service --</option>
+                    <option value="Mama Fua - Hand Wash">Mama Fua (Hand washing clothes & hanging)</option>
+                    <option value="Mama Fua - Machine Wash">Machine Laundry</option>
+                    <option value="House Cleaning">House Cleaning (Mopping, dusting, utensils)</option>
+                    <option value="Gardening">Gardening (Weeding, lawn mowing, trimming)</option>
+                    <option value="Compound Deep Clean">Compound Cleaning / Deep Clean</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Estimated Work Size / Workload *</label>
+                <input type="text" name="Work_Size" placeholder="e.g. 2 basins of clothes / 2-bedroom house / small yard" required>
+            </div>
+
+            <div style="display: flex; gap: 10px;" class="form-group">
+                <div style="flex: 1;">
+                    <label>Preferred Date *</label>
+                    <input type="date" name="Booking_Date" required>
+                </div>
+                <div style="flex: 1;">
+                    <label>Preferred Time *</label>
+                    <input type="time" name="Booking_Time" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Are cleaning detergents or tools available? *</label>
+                <select name="Tools_Available" required>
+                    <option value="">-- Choose Option --</option>
+                    <option value="Yes - Client provides everything">Yes, I will provide detergents and tools</option>
+                    <option value="No - Worker must bring tools">No, the worker should come with tools</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Special Instructions / Notes (Optional)</label>
+                <textarea name="Special_Notes" placeholder="e.g. Focus on the backyard weeds / Beware of dogs" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%; font-size: 16px; cursor: pointer;">
+                Submit Booking Request
+            </button>
+        </form>
+    </div>
+
+    <!-- HOW IT WORKS SECTION -->
+    <div class="container" id="how-it-works">
+        <h2>How It Works</h2>
+        <p><strong>For Visitors:</strong> Drop your location, select a service, and request help instantly.</p>
+        <p><strong>For Workers:</strong> Receive direct job alerts via SMS and get paid immediately via M-Pesa.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Domestic Marketplace App. All rights reserved.</p>
+        <p><a href="#privacy">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
